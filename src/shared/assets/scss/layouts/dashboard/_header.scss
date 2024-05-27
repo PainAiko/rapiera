@@ -1,0 +1,48 @@
+.wfx-app-dash {
+  .wfx-dash-header {
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    &__content {
+      height: 100%;
+      padding: 0.3em 1em;
+      border-bottom: 1px solid #ededed;
+      background: #fff;
+      position: relative;
+
+      &-body {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wfx-image {
+          height: 60px;
+          width: 60px;
+        }
+        .go-home {
+          position: absolute;
+          left: 0;
+          top: 0;
+          .wfx-image {
+            @include flexCenter;
+            i{
+              font-size: 2em;
+            }
+          }
+        }
+        .logout {
+          position: absolute;
+          right: 0;
+          top: 0;
+          .wfx-image {
+            @include flexCenter;
+            i{
+              font-size: 2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

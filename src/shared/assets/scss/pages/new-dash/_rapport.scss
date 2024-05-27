@@ -1,0 +1,27 @@
+.pg-rapport-dash {
+  input[type="search"] {
+    min-width: 250px;
+    @include md-max {
+      min-width: 200px !important;
+    }
+  }
+  .action {
+    @include md-max {
+      justify-content: center;
+      align-items: center;
+      i {
+        &.fa-eye {
+          margin-top: 2px;
+        }
+      }
+    }
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

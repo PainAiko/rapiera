@@ -1,0 +1,48 @@
+//variables & functions
+@import "abstracts/functions";
+@import "./abstracts/breakpoints";
+@import "abstracts/variables";
+@import "./abstracts/mixins";
+@import "abstracts/colors";
+
+//base
+@import "./base/reset";
+@import "./base/utilities";
+@import "./base/typographie";
+@import "./base/grid";
+
+//components
+@import "./components/card";
+@import "./components/image";
+@import "./components/form";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/list";
+@import "./components/loading";
+@import "./components/table";
+@import "./components/map";
+
+//laoyuts
+@import "./layouts/header";
+@import "./layouts/content";
+@import "./layouts/dashboard/header";
+@import "./layouts/new-dash/content";
+@import "./layouts/new-dash/header";
+@import "./layouts/new-dash/sidebar";
+
+//pages
+@import "./pages/home";
+@import "./pages/upload-intervention";
+@import "./pages/documentation";
+@import "./pages/dashboard/home";
+@import "./pages/dashboard/intervention";
+@import "./pages/dashboard/rapport-intervention";
+@import "./pages/dashboard/users";
+@import "./pages/technicien/login";
+@import "./pages/technicien/profil-technicien";
+@import "./pages/technicien/forgot-pass";
+@import "./pages/technicien/pdf";
+@import "./pages/new-dash/index";
+@import "./pages/new-dash/intervention";
+@import "./pages/new-dash/rapport";
+@import "./pages/new-dash/users"

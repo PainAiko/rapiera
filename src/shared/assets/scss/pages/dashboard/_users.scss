@@ -1,0 +1,43 @@
+.pg-users-dash {
+  @include md-max {
+    .search {
+      width: 100%;
+    }
+  }
+  input[type="search"] {
+    min-width: 300px;
+    padding: 1em;
+  }
+
+  input,
+  select {
+    padding-left: 45px;
+  }
+  .wfx-card__content {
+    height: 73vh;
+    .action {
+      @include md-max {
+        width: 100%;
+        padding: 0.5em 0;
+        justify-content: flex-end;
+      }
+      a {
+        i {
+          font-size: 1.5em;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .wfx-modal__body {
+    @include lg {
+      width: 40% !important;
+      height: 70% !important;
+    }
+
+    @include lg-max {
+      height: 85% !important;
+    }
+  }
+}

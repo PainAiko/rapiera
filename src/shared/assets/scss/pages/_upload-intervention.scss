@@ -1,0 +1,20 @@
+.wfx-page-intervention {
+  .wfx-header {
+    .prev,
+    .chat {
+      .wfx-image {
+        border: 1px solid #fff;
+        @include flexCenter;
+        i {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+
+  &__content{
+    .image-selector{
+      height: 150px;
+    }
+  }
+}

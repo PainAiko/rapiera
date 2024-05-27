@@ -1,0 +1,45 @@
+//colors
+$primary: #730fc3;
+$danger: #d3455b;
+$green: #1aae9f;
+$blue: #2310f9;
+$yellow: #ffcd4a;
+$gray: #727272;
+$gray-light: rgba(#727272, 0.5);
+$colors: (
+  "primary": $primary,
+  "danger": $danger,
+  "green": $green,
+  "blue": $blue,
+  "yellow": $yellow,
+  "gray": $gray,
+  "gray-light": $gray-light,
+  "white": #fff,
+  "black": #000,
+  "transparent": transparent,
+);
+
+// fonts
+$font-base: 12px;
+$font-size-xs: $font-base * 0.5;
+$font-size-sm: $font-base * 0.75;
+$font-size-md: $font-base;
+$font-size-lg: $font-base * 1.5;
+$font-size-xl: $font-base * 2;
+$font-size-xxl: $font-base * 3;
+
+// spacing
+$base-padding: 0.25rem;
+$base-margin: 0.25rem;
+
+//border
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+$border-color: #e8e8e8;
+
+//gap
+$gap-base: 5px;
+
+$dashi-width: 300px;
+$dashi-header-height: 60px;
+$default-bg-dashi: #f7f8f9;

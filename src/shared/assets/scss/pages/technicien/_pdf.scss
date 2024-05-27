@@ -1,0 +1,154 @@
+$pdf-color: #033260;
+@mixin titleStyle {
+  color: $pdf-color;
+  font-weight: 700;
+  background: $border-color;
+}
+.wfx-pdf {
+  font-size: 1vw;
+  width: 2480px;
+  min-height: 3508px;
+  border: 1px solid;
+
+  &__header {
+    height: 80px;
+    width: 100%;
+    .wfx-image {
+      height: 80px;
+      width: auto;
+      img {
+        width: auto;
+      }
+    }
+  }
+  &__container {
+    &-title {
+      padding: 1em 0;
+      text-align: center;
+      color: $pdf-color;
+    }
+    &__rapport {
+      table {
+        width: 100%;
+        padding: 2em 0;
+        tr.hidden {
+          visibility: hidden !important;
+        }
+        tr {
+          td:first-child {
+            @include titleStyle;
+          }
+        }
+        td {
+          &.title {
+            @include titleStyle;
+          }
+          border: 1px solid $border-color;
+          padding: 0.5em;
+          width: 25%;
+          line-height: 1.1em;
+        }
+      }
+      .consigne-pdf {
+        padding: 0.5em;
+        color: $pdf-color;
+        font-weight: 700;
+        font-size: 1.4em;
+        line-height: 1.1em;
+      }
+      .pdf-all-img {
+        .items {
+          padding: 2em 0.5em;
+          .item {
+            .title {
+              font-size: 1.8em;
+              color: $primary;
+              line-height: 1.5em;
+              font-weight: 700;
+            }
+            .item-photo {
+              margin: 1em 0;
+              &__subtitle {
+                font-weight: bold;
+                margin-bottom: 1em;
+              }
+              &__images {
+                .col-3 {
+                  @include flexCenter;
+                  .wfx-image {
+                    width: 80%;
+                    height: 300px;
+                    @include md-max {
+                      height: auto !important;
+                      min-height: 100px;
+                    }
+                    border: 1px solid #ccc;
+                    border-radius: 1em;
+                    background: #ccc;
+                    img {
+                      object-fit: contain;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    &-signature {
+      width: 100%;
+      height: 300px;
+      .wfx-row {
+        height: 100%;
+        .item {
+          color: $pdf-color;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .title {
+            margin-bottom: 1em;
+            font-weight: 600;
+          }
+          .wfx-image {
+            width: 50%;
+            height: 80%;
+            border: 1px solid $border-color;
+            position: relative;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          .info {
+            width: 100%;
+            text-align: end;
+          }
+        }
+      }
+    }
+    &-end {
+      margin-top: 1em;
+      .wfx-image {
+        height: 100px;
+        img {
+          object-fit: contain;
+        }
+      }
+      .address {
+        font-style: italic;
+        font-weight: 400;
+        color: #676767;
+        font-size: 1.2em;
+        letter-spacing: 5px;
+        line-height: normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.pg-docs {
+  &__content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    &-side {
+      height: calc(100vh - 60px - 3em);
+      overflow: hidden;
+      .side-content {
+        // border: 1px solid;
+        height: 100%;
+        display: block;
+      }
+    }
+    &-body {
+      height: calc(100vh - 60px - 3em);
+      overflow: hidden;
+      padding: 0 1em;
+      .body-content {
+        height: 100%;
+        overflow: auto;
+      }
+    }
+  }
+}

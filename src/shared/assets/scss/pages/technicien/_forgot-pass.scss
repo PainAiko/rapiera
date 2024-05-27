@@ -1,0 +1,15 @@
+.pg-forgot-pass {
+  height: calc(100vh - 60px);
+  background: rgba($primary, 0.6);
+  &__content {
+    height: 100%;
+    .wfx-forgot-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input {
+        padding-left: 45px;
+      }
+    }
+  }
+}

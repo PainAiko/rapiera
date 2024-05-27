@@ -1,0 +1,127 @@
+.wfx-dashi {
+  &.toggle {
+    .wfx-dashi__sidebar {
+      width: 80px;
+      &-head {
+        .logo {
+          .wfx-image {
+            width: 80px;
+            height: $dashi-header-height;
+            img {
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .side-menu {
+        padding: 0 !important;
+        li {
+          margin: 0;
+          a {
+            .icon {
+              width: 100%;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sidebar {
+    width: $dashi-width;
+    transition: width 0.2s ease-in;
+    &-head {
+      height: $dashi-header-height;
+      border-bottom: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      position: relative;
+      z-index: 2;
+      background: white;
+      .logo {
+        .wfx-image {
+          width: $dashi-width;
+          height: $dashi-header-height;
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+      .hamburger {
+        position: absolute;
+        top: 0;
+        right: -52px;
+        width: 50px;
+
+        @include md-max {
+          right: -62px;
+          width: 60px;
+        }
+        height: 100%;
+        @include flexCenter;
+        background: #fff;
+        button {
+          background: none;
+          border: none;
+          font-size: 1.8em;
+          position: relative;
+          z-index: 5;
+          cursor: pointer;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+    &-content {
+      height: calc(100% - $dashi-header-height);
+      max-height: calc(100% - $dashi-header-height);
+      border: 1px solid $border-color;
+      border-top: none;
+      overflow: auto;
+      .side-menu {
+        margin: 0;
+        padding-left: 0;
+        padding: 0 1em;
+        li {
+          margin: 8px 0;
+          a {
+            position: relative;
+            height: 100%;
+            display: flex;
+            padding: 1em 0.5em 1em 40px;
+            transition: all ease-in 0.2s;
+            align-items: center;
+            border-radius: 0.5em;
+            min-height: 50px;
+            &:hover,
+            &.active {
+              background: $default-bg-dashi;
+              color: $primary;
+              span {
+                font-weight: 600;
+              }
+              i {
+                color: $primary !important;
+              }
+            }
+
+            .icon {
+              height: 100%;
+              width: 40px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              @include flexCenter;
+              i {
+                font-size: 1.3em;
+                color: rgba(#000, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

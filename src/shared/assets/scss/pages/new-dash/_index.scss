@@ -1,0 +1,16 @@
+.wfx-dashi {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  color: rgba(#000, 0.8);
+
+  &.toggle {
+    .wfx-dashi__right {
+      width: calc(100vw - 60px);
+    }
+  }
+  &__right {
+    width: calc(100vw - $dashi-width);
+    transition: width 0.3s ease-in;
+  }
+}

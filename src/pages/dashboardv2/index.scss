@@ -1,0 +1,14 @@
+@keyframes jungleSwing {
+    0%,  100% {
+     transform: rotate(0deg);
+   }
+    50% {
+     transform: rotate(20deg);
+   }
+ }
+ 
+
+ .fas.fa-bell {
+    animation: jungleSwing  100ms linear infinite;
+    color: rgb(252, 252, 45);
+  }

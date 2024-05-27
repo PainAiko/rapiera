@@ -1,0 +1,26 @@
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val !important;
+  }
+  .bg-#{$key} {
+    background-color: $val !important;
+    background-image: $val !important;
+  }
+  .hover\:text-#{$key} {
+    transition: all 0.5s ease;
+    &:hover {
+      color: $val !important;
+    }
+  }
+  .hover\:bg-#{$key} {
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: $val !important;
+      background-image: $val !important;
+    }
+  }
+
+  .border-#{$key} {
+    border-color: $val !important;
+  }
+}

@@ -1,0 +1,11 @@
+.wfx-main,
+.wfx-main-dash {
+//   height: 150vh;
+  margin-top: 1em;
+  &__content {
+    padding: 1em;
+    &-body {
+      background: #fff;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.wfx-list {
+  padding: 0;
+  margin: 0;
+  text-decoration: dashed;
+  &.no-hover {
+    & > li {
+      cursor: default;
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+  li {
+    @include borderDefault;
+    padding: 1em 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    position: relative;
+    &:not(:first-child) {
+      border-top: none;
+    }
+    &:hover {
+      background: $border-color;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+.wfx-list-collapse {
+  padding: 0;
+  margin: 0;
+  text-decoration: dashed;
+  & > li {
+    @include borderDefault;
+    padding: 1em 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    position: relative;
+    &:not(:first-child) {
+      border-top: none;
+    }
+    &:hover {
+      background: $border-color;
+    }
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: none;
+    position: relative;
+    font-weight: 800;
+    &.no-icon {
+      &::after {
+        display: none !important;
+      }
+    }
+    // border: 1px solid red;
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f078";
+      position: absolute;
+      right: 1em;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      border: 1px solid #ededed;
+      background: #fff;
+      padding: 1em 0.5em;
+      border-bottom: none;
+      &:last-child {
+        border-bottom: 1px solid #ededed;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+
+    &:checked {
+      ~ ul {
+        height: 100%;
+        transform-origin: top;
+        transition: transform 0.2s ease-out;
+        transform: scaleY(1);
+      }
+
+      + label {
+        &::after {
+          content: "\f077";
+        }
+      }
+    }
+
+    ~ ul {
+      height: 0;
+      transform: scaleY(0);
+    }
+  }
+}

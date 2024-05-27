@@ -1,0 +1,15 @@
+.pg-login {
+  height: calc(100vh - 60px);
+  background: rgba($primary, 0.6);
+  &__content {
+    height: 100%;
+    .wfx-login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      input {
+        padding-left: 45px;
+      }
+    }
+  }
+}

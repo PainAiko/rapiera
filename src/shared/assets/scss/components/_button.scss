@@ -1,0 +1,53 @@
+.wfx-btn {
+  @include btn;
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    background-color: $primary;
+    color: #000;
+  }
+}
+
+@each $key, $val in $colors {
+  .wfx-btn-#{$key} {
+    @include btn($val);
+    @if ($val == black) {
+      color: #fff;
+    }
+    &:hover {
+      background: lighten($val, 5);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+      background-color: $val;
+    }
+  }
+  .wfx-btn-outlined-#{$key} {
+    @include btn;
+    border: $base-border-thickness solid $val;
+    color: $val;
+    &:hover {
+      background: lighten($val, 5);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+      background-color: $val;
+    }
+  }
+
+  .wfx-btn-complement-#{$key} {
+    @include btn($val);
+    color: light-comp($val);
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+      background-color: $val;
+    }
+  }
+}
